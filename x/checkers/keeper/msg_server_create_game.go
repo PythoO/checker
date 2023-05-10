@@ -26,6 +26,7 @@ func (k msgServer) CreateGame(goCtx context.Context, msg *types.MsgCreateGame) (
 		Black: msg.Black,
 		Red:   msg.Red,
 	}
+
 	err := storedGame.Validate()
 	if err != nil {
 		return nil, err
